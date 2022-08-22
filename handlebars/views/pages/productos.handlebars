@@ -1,0 +1,25 @@
+<div class="my-4 text-center">
+    <h1 class="fw-bold text-warning">Listado de productos</h1>
+</div>
+{{#if listExists}} 
+<table border="1" align="center" bordercolor="black" cellspacing="2" class="table">
+    <thead>
+        <tr align="center" class="bg-secondary align-middle">
+            <th width=200 class="fs-4 fw-bold text-warning">Titulo</th>
+            <th width=200 class="fs-4 fw-bold text-warning">Precio</th>
+            <th width=200 class="fs-4 fw-bold text-warning">Img</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each productos}}
+            <tr align="center" class="align-middle">
+                <th width=200 class="fs-4 text-white text-center">{{this.titulo}}</th>
+                <th width=200 class="fs-4 text-white">{{this.precio}}</th>
+                <th width=200 class="fs-4 text-white"><img src="{{this.url}}" alt="{{this.titulo}}" width="200" height="200"/></th>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<h2>No hay productos en el listado</h2>
+{{/if}}
