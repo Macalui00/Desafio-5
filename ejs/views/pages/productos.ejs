@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <%- include("../partials/header.ejs") -%>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body class="bg-dark">
     <header>
@@ -15,7 +14,6 @@
         </div>
         </nav>
     </header>
-    
     <div class="container mt-0">
         <div class="row vh-100 align-items-center justify-content-center">
             <div class="col-auto">
@@ -36,7 +34,7 @@
                             <tr align="center" class="align-middle">
                                 <th width=200 class="fs-4 text-white text-center"><%= productos[i].titulo %></th>
                                 <th width=200 class="fs-4 text-white"><%= productos[i].precio %></th>
-                                <th width=200 class="fs-4 text-white"><img src="<%= productos[i].url %>" alt="<%= productos[i].titulo %>" width="200" height="200"/></th>
+                                <th width=200 class="fs-4 text-white"><img src="<%= productos[i].url %>" alt="<%= productos[i].titulo %>" width="100" height="100"/></th>
                             </tr>
                         <% } %>
                     </table> 
@@ -46,7 +44,9 @@
             </div>
         </div>
     </div>
-
+    <footer class="row text-center mt-5 mb-2">
+        <%- include('../partials/footer.ejs') %>
+    </footer>
     <script src="../../public/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
